@@ -126,9 +126,35 @@ body {
 }
 
 /* Content messages */
-.content__messages {
+.content__messages--margin {
     flex-grow: 1;
     background-image: url("../img/mine.jpg");
+    overflow-y: auto;
+}
+
+.content__messages {
+    margin: 50px;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Message style */
+.message {
+    background-color: #fff;
+    width: 250px;
+    margin: 0 0 50px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.message.my-message {
+    float: right;
+    background-color: #d5faba;
+    clear: both;
 }
 
 /* Content input bar */
@@ -159,4 +185,8 @@ body {
 
 .content__input-bar--button {
     width: 50px;
+}
+
+.template {
+    display: none;
 }
