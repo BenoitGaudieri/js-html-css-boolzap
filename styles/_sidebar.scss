@@ -1,0 +1,61 @@
+/* 
+  ____  _     _      _                
+ / ___|(_) __| | ___| |__   __ _ _ __ 
+ \___ \| |/ _` |/ _ \ '_ \ / _` | '__|
+  ___) | | (_| |  __/ |_) | (_| | |   
+ |____/|_|\__,_|\___|_.__/ \__,_|_|   
+                                       
+*/
+/* Sidebar Container */
+.sidebar {
+    width: 35%;
+    height: 100%;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Sidebar header */
+.sidebar__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #eaeaea;
+}
+
+.sidebar--user-pic {
+    height: 50px;
+    display: inline-block;
+    border-radius: 50%;
+}
+
+/* Sidebar banner */
+.sidebar__banner {
+    height: 80px;
+    background-color: #8edafd;
+}
+
+/* Sidebar search */
+.sidebar__search {
+    display: flex;
+    height: 50px;
+    align-items: center;
+}
+
+/* Sidebar content */
+.sidebar__content {
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+.sidebar__content--user-div {
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+
+.sidebar__user--info {
+    display: inline-block;
+}
