@@ -33,6 +33,40 @@ body {
   background: #fff;
 }
 
+.user-pic {
+  margin: 5px 10px;
+  height: 50px;
+  display: inline-block;
+  border-radius: 50%;
+}
+
+.user--info {
+  display: inline-block;
+}
+
+.user--info .user--username {
+  font-weight: 700;
+}
+
+.user--info .user--last-message {
+  color: #bec0c2;
+}
+
+.time-stamp {
+  margin: 0 5px;
+  color: #bec0c2;
+}
+
+i {
+  color: #bec0c2;
+  font-size: 22px;
+  margin: 10px;
+}
+
+i:last-child {
+  margin-right: 25px;
+}
+
 /* 
   ____  _     _      _                
  / ___|(_) __| | ___| |__   __ _ _ __ 
@@ -69,27 +103,57 @@ body {
   background: #eaeaea;
 }
 
-.sidebar--user-pic {
-  height: 50px;
-  display: inline-block;
-  border-radius: 50%;
-}
-
 /* Sidebar banner */
 .sidebar__banner {
   height: 80px;
   background-color: #8edafd;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sidebar__banner i {
+  background-color: #fff;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  color: #8edafd;
+}
+
+.sidebar__banner p {
+  font-weight: 700;
+}
+
+.sidebar__banner a {
+  color: #000;
+  font-size: 12px;
+}
+
+.sidebar__banner--message {
+  display: inline-block;
 }
 
 /* Sidebar search */
 .sidebar__search {
+  height: 60px;
+  background-color: #fafafa;
+}
+
+.sidebar__search--bar {
+  background-color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 50px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  border: 1px solid #eaebeb;
+  margin: 10px;
 }
 
 /* Sidebar content */
@@ -98,6 +162,19 @@ body {
       -ms-flex-positive: 1;
           flex-grow: 1;
   overflow-y: auto;
+}
+
+.sidebar__content--left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sidebar__content--left .user-pic {
+  margin: 20px;
 }
 
 .sidebar__content--user-div {
@@ -111,11 +188,12 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #eaebeb;
+  cursor: pointer;
 }
 
-.sidebar__user--info {
-  display: inline-block;
+.active {
+  background-color: #eaebeb;
 }
 
 /* 
@@ -153,14 +231,13 @@ body {
           align-items: center;
 }
 
-.content--user-pic {
-  height: 50px;
-  display: inline-block;
-  border-radius: 50%;
-}
-
-.content--user-info {
-  display: inline-block;
+.content__header--left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 /* Content messages */
@@ -206,6 +283,11 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-align: center;
+}
+
+.content__input-bar i {
+  margin-right: 0;
 }
 
 .content__input-bar--emoji {
@@ -220,7 +302,7 @@ body {
   height: 65%;
 }
 
-.chat--input {
+.input {
   width: 100%;
   height: 100%;
   padding: 0 15px;

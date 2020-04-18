@@ -26,7 +26,7 @@
 
                 <!-- Sidebar left side -->
                 <div class="sidebar__header--left">
-                    <img class="sidebar--user-pic" src="img/avatar_io.jpg" alt="me">
+                    <img class="user-pic" src="img/avatar_io.jpg" alt="me">
                 </div>
 
                 <!-- Sidebar right side -->
@@ -48,11 +48,11 @@
 
             <!-- Sidebar search -->
             <div class="sidebar__search">
-                <div class="sidebar__search--icon">
-                    <i class="fas fa-search"></i>
-                </div>
                 <div class="sidebar__search--bar">
-                    <input type="text" class="sidebar__search--input">
+                    <div class="sidebar__search--icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <input type="text" class="input" placeholder="Cerca o inizia una nuova chat">
                 </div>
             </div>
 
@@ -60,16 +60,16 @@
             <div class="sidebar__content">
 
                 <!-- User div -->
-                <div class="sidebar__content--user-div">
+                <div class="sidebar__content--user-div active">
 
                     <!-- Left side -->
                     <div class="sidebar__content--left">
 
                         <!-- Avatar -->
-                        <img class="sidebar--user-pic" src="img/avatar_2.jpg" alt="user">
+                        <img class="user-pic" src="img/avatar_1.jpg" alt="user">
 
                         <!-- Username and last message -->
-                        <div class="sidebar__user--info">
+                        <div class="user--info">
                             <div class="user--username">
                                 Michele
                             </div>
@@ -81,7 +81,7 @@
 
                     <!-- Right side timestamp -->
                     <div class="sidebar__content--right">
-                        <div class="sidebar__user-time-stamp">
+                        <div class="time-stamp">
                             17.53
                         </div>
                     </div>
@@ -93,10 +93,10 @@
                     <div class="sidebar__content--left">
 
                         <!-- Avatar -->
-                        <img class="sidebar--user-pic" src="img/avatar_2.jpg" alt="user">
+                        <img class="user-pic" src="img/avatar_1.jpg" alt="user">
 
                         <!-- Username and last message -->
-                        <div class="sidebar__user--info">
+                        <div class="user--info">
                             <div class="user--username">
                                 Michele
                             </div>
@@ -108,7 +108,7 @@
 
                     <!-- Right side timestamp -->
                     <div class="sidebar__content--right">
-                        <div class="sidebar__user-time-stamp">
+                        <div class="time-stamp">
                             17.53
                         </div>
                     </div>
@@ -120,10 +120,10 @@
                     <div class="sidebar__content--left">
 
                         <!-- Avatar -->
-                        <img class="sidebar--user-pic" src="img/avatar_2.jpg" alt="user">
+                        <img class="user-pic" src="img/avatar_1.jpg" alt="user">
 
                         <!-- Username and last message -->
-                        <div class="sidebar__user--info">
+                        <div class="user--info">
                             <div class="user--username">
                                 Michele
                             </div>
@@ -135,7 +135,7 @@
 
                     <!-- Right side timestamp -->
                     <div class="sidebar__content--right">
-                        <div class="sidebar__user-time-stamp">
+                        <div class="time-stamp">
                             17.53
                         </div>
                     </div>
@@ -147,10 +147,10 @@
                     <div class="sidebar__content--left">
 
                         <!-- Avatar -->
-                        <img class="sidebar--user-pic" src="img/avatar_2.jpg" alt="user">
+                        <img class="user-pic" src="img/avatar_1.jpg" alt="user">
 
                         <!-- Username and last message -->
-                        <div class="sidebar__user--info">
+                        <div class="user--info">
                             <div class="user--username">
                                 Michele
                             </div>
@@ -162,7 +162,7 @@
 
                     <!-- Right side timestamp -->
                     <div class="sidebar__content--right">
-                        <div class="sidebar__user-time-stamp">
+                        <div class="time-stamp">
                             17.53
                         </div>
                     </div>
@@ -174,10 +174,10 @@
                     <div class="sidebar__content--left">
 
                         <!-- Avatar -->
-                        <img class="sidebar--user-pic" src="img/avatar_2.jpg" alt="user">
+                        <img class="user-pic" src="img/avatar_1.jpg" alt="user">
 
                         <!-- Username and last message -->
-                        <div class="sidebar__user--info">
+                        <div class="user--info">
                             <div class="user--username">
                                 Michele
                             </div>
@@ -189,39 +189,13 @@
 
                     <!-- Right side timestamp -->
                     <div class="sidebar__content--right">
-                        <div class="sidebar__user-time-stamp">
+                        <div class="time-stamp">
                             17.53
                         </div>
                     </div>
 
                 </div>
-                <div class="sidebar__content--user-div">
 
-                    <!-- Left side -->
-                    <div class="sidebar__content--left">
-
-                        <!-- Avatar -->
-                        <img class="sidebar--user-pic" src="img/avatar_2.jpg" alt="user">
-
-                        <!-- Username and last message -->
-                        <div class="sidebar__user--info">
-                            <div class="user--username">
-                                Michele
-                            </div>
-                            <div class="user--last-message">
-                                cose
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Right side timestamp -->
-                    <div class="sidebar__content--right">
-                        <div class="sidebar__user-time-stamp">
-                            17.53
-                        </div>
-                    </div>
-
-                </div>
             </div>
 
         </div>
@@ -234,9 +208,9 @@
 
                 <!-- Header left side -->
                 <div class="content__header--left">
-                    <img class="content--user-pic" src="img/avatar_1.jpg" alt="avi">
-                    <div class="content--user-info">
-                        <div class="user-name">Michele</div>
+                    <img class="user-pic" src="img/avatar_1.jpg" alt="avi">
+                    <div class="user--info">
+                        <div class="user--username">Michele</div>
                         <div class="last-seen">Ultimo accesso oggi</div>
                     </div>
 
@@ -263,7 +237,7 @@
 
                 <!-- Input bar -->
                 <div class="content__input-bar--input">
-                    <input type="text" class="chat--input" placeholder="Scrivi un messaggio">
+                    <input type="text" class="input chat--input" placeholder="Scrivi un messaggio">
                 </div>
 
                 <!-- Record/Send button -->
