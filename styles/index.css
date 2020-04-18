@@ -168,7 +168,7 @@ body {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  background-image: url("../img/mine.jpg");
+  background-image: url("../../img/mine.jpg");
   overflow-y: auto;
 }
 

@@ -10,7 +10,7 @@
 .content {
     width: 65%;
     height: 100%;
-    background: #eaeaea;
+    background: $header-bg;
     display: flex;
     flex-direction: column;
 }
@@ -35,7 +35,7 @@
 /* Content messages */
 .content__messages--margin {
     flex-grow: 1;
-    background-image: url("../img/mine.jpg");
+    background-image: url("../../img/mine.jpg");
     overflow-y: auto;
 }
 
@@ -60,7 +60,7 @@
 
 .message.my-message {
     float: right;
-    background-color: #d5faba;
+    background-color: $my-message-bg;
     clear: both;
 }
 
