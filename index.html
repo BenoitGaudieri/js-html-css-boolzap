@@ -22,7 +22,7 @@
         <div class="sidebar">
 
             <!-- Sidebar header -->
-            <div class="sidebar__header">
+            <div class="header sidebar__header">
 
                 <!-- Sidebar left side -->
                 <div class="sidebar__header--left">
@@ -204,7 +204,7 @@
         <div class="content">
 
             <!-- Content Header -->
-            <div class="content__header">
+            <div class="header">
 
                 <!-- Header left side -->
                 <div class="content__header--left">
@@ -225,8 +225,8 @@
             </div>
 
             <!-- Content messages -->
-            <div class="content__messages--margin">
-                <div class="content__messages clearfix"></div>
+            <div class="js-content__messages--margin">
+                <div class="js-content__messages clearfix"></div>
             </div>
 
             <!-- Content input bar -->
@@ -237,20 +237,21 @@
 
                 <!-- Input bar -->
                 <div class="content__input-bar--input">
-                    <input type="text" class="input chat--input" placeholder="Scrivi un messaggio">
+                    <input type="text" class="input js-chat--input" placeholder="Scrivi un messaggio">
                 </div>
 
                 <!-- Record/Send button -->
                 <div class="content__input-bar--button">
-                    <i class="fas fa-microphone"></i>
-                    <i class="fas fa-paper-plane"></i>
+                    <!-- <i class="fas fa-microphone active"></i>
+                    <i class="fas fa-paper-plane"></i> -->
+                    <i class="fas fa-microphone active js-send"></i>
                 </div>
             </div>
         </div>
 
     </div>
 
-    <div class="template">
+    <div class="js-template">
         <div class="message">
             <div class="message--timestamp"></div>
         </div>

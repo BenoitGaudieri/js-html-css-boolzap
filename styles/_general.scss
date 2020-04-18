@@ -29,6 +29,14 @@ body {
     background: #fff;
 }
 
+// Header
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 65px;
+}
+
 // User style
 .user-pic {
     margin: 5px 10px;

@@ -17,10 +17,8 @@
 
 /* Sidebar header */
 .sidebar__header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     background: $header-bg;
+    border-right: 1px solid $t-gray;
 }
 
 /* Sidebar banner */
@@ -38,6 +36,7 @@
         line-height: 50px;
         text-align: center;
         color: $banner;
+        margin: 0 10px 0 20px;
     }
 
     p {

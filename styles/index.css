@@ -33,6 +33,19 @@ body {
   background: #fff;
 }
 
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 65px;
+}
+
 .user-pic {
   margin: 5px 10px;
   height: 50px;
@@ -91,16 +104,8 @@ i:last-child {
 
 /* Sidebar header */
 .sidebar__header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   background: #eaeaea;
+  border-right: 1px solid #d6d6d6;
 }
 
 /* Sidebar banner */
@@ -123,6 +128,7 @@ i:last-child {
   line-height: 50px;
   text-align: center;
   color: #8edafd;
+  margin: 0 10px 0 20px;
 }
 
 .sidebar__banner p {
@@ -219,18 +225,6 @@ i:last-child {
 }
 
 /* Content header */
-.content__header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
 .content__header--left {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -241,7 +235,7 @@ i:last-child {
 }
 
 /* Content messages */
-.content__messages--margin {
+.js-content__messages--margin {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
@@ -249,7 +243,7 @@ i:last-child {
   overflow-y: auto;
 }
 
-.content__messages {
+.js-content__messages {
   margin: 50px;
 }
 
@@ -266,6 +260,7 @@ i:last-child {
   margin: 0 0 50px;
   padding: 20px;
   border-radius: 10px;
+  overflow-wrap: break-word;
 }
 
 .message.my-message {
@@ -308,15 +303,20 @@ i:last-child {
   padding: 0 15px;
   border: 0;
   outline: none;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
+  -webkit-transition: outline 0.1s;
+  transition: outline 0.1s;
+}
+
+.input:focus-within {
+  outline: solid 4px #8edafd;
 }
 
 .content__input-bar--button {
   width: 50px;
+  margin: 0 15px 0 0;
 }
 
-.template {
+.js-template {
   display: none;
 }
 /*# sourceMappingURL=index.css.map */

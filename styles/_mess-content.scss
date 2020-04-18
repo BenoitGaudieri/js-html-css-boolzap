@@ -16,19 +16,13 @@
 }
 
 /* Content header */
-.content__header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
 .content__header--left {
     display: flex;
     align-items: center;
 }
 
 /* Content messages */
-.content__messages--margin {
+.js-content__messages--margin {
     flex-grow: 1;
     background-image: url("../../img/mine.jpg");
     overflow-y: auto;
@@ -36,7 +30,7 @@
     // align-items: flex-end;
 }
 
-.content__messages {
+.js-content__messages {
     margin: 50px;
     // width: 100%;
     // display: flex;
@@ -56,6 +50,7 @@
     margin: 0 0 50px;
     padding: 20px;
     border-radius: 10px;
+    overflow-wrap: break-word;
 }
 
 .message.my-message {
@@ -93,13 +88,26 @@
     padding: 0 15px;
     border: 0;
     outline: none;
-    transition: 0.4s;
+    transition: outline 0.1s;
+}
+
+.input:focus-within {
+    outline: solid 4px $banner;
 }
 
 .content__input-bar--button {
     width: 50px;
+    margin: 0 15px 0 0;
+
+    // .fas {
+    //     display: none;
+    // }
+
+    // .active {
+    //     display: block;
+    // }
 }
 
-.template {
+.js-template {
     display: none;
 }
