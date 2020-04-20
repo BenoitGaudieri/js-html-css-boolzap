@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wazzup</title>
+    <title>Boolzap</title>
     <!-- Fontawesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css"
         integrity="sha384-v8BU367qNbs/aIZIxuivaU55N5GPF89WBerHoGA4QTcbUjYiLQtKdrfXnqAcXyTv" crossorigin="anonymous">
@@ -50,155 +50,24 @@
             <div class="sidebar__search">
                 <div class="sidebar__search--bar">
                     <div class="sidebar__search--icon">
-                        <i class="fas fa-search"></i>
+                        <label for="searchbar">
+                            <i class="fas fa-search"></i>
+                        </label>
                     </div>
-                    <input type="text" class="input" placeholder="Cerca o inizia una nuova chat">
+                    <input type="text" id="searchbar" class="input js-searchbar"
+                        placeholder="Cerca o inizia una nuova chat">
                 </div>
             </div>
 
             <!-- Sidebar content -->
-            <div class="sidebar__content">
+            <div class="js-sidebar__content">
 
-                <!-- User div -->
-                <div class="sidebar__content--user-div active" data-conversation="0">
 
-                    <!-- Left side -->
-                    <div class="sidebar__content--left">
-
-                        <!-- Avatar -->
-                        <img class="user-pic" src="img/avatar_1.jpg" alt="user">
-
-                        <!-- Username and last message -->
-                        <div class="user--info">
-                            <div class="user--username">
-                                Michele
-                            </div>
-                            <div class="user--last-message">
-                                cose
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Right side timestamp -->
-                    <div class="sidebar__content--right">
-                        <div class="time-stamp">
-                            17.53
-                        </div>
-                    </div>
-
-                </div>
-                <div class="sidebar__content--user-div">
-
-                    <!-- Left side -->
-                    <div class="sidebar__content--left">
-
-                        <!-- Avatar -->
-                        <img class="user-pic" src="img/avatar_1.jpg" alt="user">
-
-                        <!-- Username and last message -->
-                        <div class="user--info">
-                            <div class="user--username">
-                                Michele
-                            </div>
-                            <div class="user--last-message">
-                                cose
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Right side timestamp -->
-                    <div class="sidebar__content--right">
-                        <div class="time-stamp">
-                            17.53
-                        </div>
-                    </div>
-
-                </div>
-                <div class="sidebar__content--user-div">
-
-                    <!-- Left side -->
-                    <div class="sidebar__content--left">
-
-                        <!-- Avatar -->
-                        <img class="user-pic" src="img/avatar_1.jpg" alt="user">
-
-                        <!-- Username and last message -->
-                        <div class="user--info">
-                            <div class="user--username">
-                                Michele
-                            </div>
-                            <div class="user--last-message">
-                                cose
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Right side timestamp -->
-                    <div class="sidebar__content--right">
-                        <div class="time-stamp">
-                            17.53
-                        </div>
-                    </div>
-
-                </div>
-                <div class="sidebar__content--user-div">
-
-                    <!-- Left side -->
-                    <div class="sidebar__content--left">
-
-                        <!-- Avatar -->
-                        <img class="user-pic" src="img/avatar_1.jpg" alt="user">
-
-                        <!-- Username and last message -->
-                        <div class="user--info">
-                            <div class="user--username">
-                                Michele
-                            </div>
-                            <div class="user--last-message">
-                                cose
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Right side timestamp -->
-                    <div class="sidebar__content--right">
-                        <div class="time-stamp">
-                            17.53
-                        </div>
-                    </div>
-
-                </div>
-                <div class="sidebar__content--user-div">
-
-                    <!-- Left side -->
-                    <div class="sidebar__content--left">
-
-                        <!-- Avatar -->
-                        <img class="user-pic" src="img/avatar_1.jpg" alt="user">
-
-                        <!-- Username and last message -->
-                        <div class="user--info">
-                            <div class="user--username">
-                                Michele
-                            </div>
-                            <div class="user--last-message">
-                                cose
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Right side timestamp -->
-                    <div class="sidebar__content--right">
-                        <div class="time-stamp">
-                            17.53
-                        </div>
-                    </div>
-
-                </div>
 
             </div>
 
         </div>
+
 
         <!-- Message content -->
         <div class="content">
@@ -254,7 +123,40 @@
 
     </div>
 
+    <!-- 
+        Template 
+    -->
     <div class="js-template">
+
+        <!-- Template user div -->
+        <div class="js-sidebar__content--user-div" data-conversation="0">
+            <!-- Left side -->
+            <div class="js-sidebar__content--left">
+
+                <!-- Avatar -->
+                <img class="user-pic" src="img/avatar_1.jpg" alt="user">
+
+                <!-- Username and last message -->
+                <div class="user--info">
+                    <div class="user--username">
+                        <!-- Michele -->
+                    </div>
+                    <div class="user--last-message">
+                        Troppi children
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right side timestamp -->
+            <div class="js-sidebar__content--right">
+                <div class="time-stamp">
+                    17.53
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Template message -->
         <div class="message">
             <span class="message--text"></span>
             <div class="message--timestamp"></div>

@@ -103,6 +103,10 @@
     flex-grow: 1;
     // margin: 10px;
     height: 65%;
+
+    .input:focus-within {
+        outline: solid 4px $banner;
+    }
 }
 
 .input {
@@ -112,10 +116,6 @@
     border: 0;
     outline: none;
     transition: outline 0.1s;
-}
-
-.input:focus-within {
-    outline: solid 4px $banner;
 }
 
 .content__input-bar--button {

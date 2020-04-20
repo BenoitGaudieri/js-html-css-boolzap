@@ -23,7 +23,7 @@
 
 /* Sidebar banner */
 .sidebar__banner {
-    height: 80px;
+    height: 140px;
     background-color: $banner;
     display: flex;
     align-items: center;
@@ -64,16 +64,17 @@
     display: flex;
     align-items: center;
     border: 1px solid $sidebar-user;
-    margin: 10px;
+    // margin: 10px;
+    height: 100%;
 }
 
 /* Sidebar content */
-.sidebar__content {
+.js-sidebar__content {
     flex-grow: 1;
     overflow-y: auto;
 }
 
-.sidebar__content--left {
+.js-sidebar__content--left {
     display: flex;
     align-items: center;
 
@@ -82,7 +83,7 @@
     }
 }
 
-.sidebar__content--user-div {
+.js-sidebar__content--user-div {
     height: 90px;
     display: flex;
     justify-content: space-between;
@@ -102,4 +103,8 @@
         background-color: $sidebar-user;
         border-bottom: transparent;
     }
+}
+
+.user--username {
+    text-transform: capitalize;
 }

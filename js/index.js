@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    // Message references
     let messageArr = ["Ciao come stai?", "Questo è il secondo messaggio"];
     let messageDiv = $(".js-content__messages");
     let newMessage = $(".js-chat--input");
@@ -128,5 +129,64 @@ $(document).ready(function () {
         var minutes = addZero(date.getMinutes());
         var timestamp = hour + ":" + minutes;
         return timestamp;
+    }
+
+    /**
+     *   
+  ____ ___ ____  _____ ____    _    ____  
+ / ___|_ _|  _ \| ____| __ )  / \  |  _ \ 
+ \___ \| || | | |  _| |  _ \ / _ \ | |_) |
+  ___) | || |_| | |___| |_) / ___ \|  _ < 
+ |____/___|____/|_____|____/_/   \_\_| \_\
+                                          
+     */
+    // Sidebar references
+    let sidebar = $(".js-sidebar__content");
+    let searchBar = $(".js-searchbar");
+    // User list
+    let userList = [
+        "michele",
+        "fabio",
+        "samuele",
+        "alessandro b.",
+        "alessandro l.",
+        "claudia",
+        "davide",
+        "federico",
+    ];
+
+    // TODO: to refactor
+    searchBar.keyup(function () {
+        let searchInput = searchBar.val().toLowerCase().trim();
+        if (searchInput != "") {
+            sidebar.children().hide();
+
+            for (let i = 0; i < userList.length; i++) {
+                if (userList[i].includes(searchInput)) {
+                    sidebar.children().eq(i).show();
+                }
+            }
+        } else {
+            sidebar.children().show();
+        }
+    });
+
+    // Populating sidebar
+    for (let s = 0; s < userList.length; s++) {
+        let newUser = $(".js-template .js-sidebar__content--user-div").clone();
+        //Username
+        newUser
+            .children(".js-sidebar__content--left")
+            .children(".user--info")
+            .children(".user--username")
+            .text(userList[s]);
+        //Pic
+        newUser
+            .children(".js-sidebar__content--left")
+            .children(".user-pic")
+            .attr("src", "img/avatar_" + (s + 1) + ".jpg");
+        //Data attr
+        newUser.attr("data-conversation", s);
+        sidebar.append(newUser);
     }
 }); // end Doc ready
