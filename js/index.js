@@ -61,8 +61,6 @@ $(document).ready(function () {
 
         // empty input val
         newMessage.val("");
-
-        setTimeout(msgDisplay, 3000);
     }
 
     // TODO: refactoring
@@ -76,6 +74,8 @@ $(document).ready(function () {
                 elementNew.append(timestampNew);
                 elementNew.addClass("my-message");
                 messageDiv.append(elementNew);
+
+                setTimeout(msgDisplay, 3000);
             }
 
             // empty input val
