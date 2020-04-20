@@ -23,10 +23,11 @@
 
 /* Sidebar banner */
 .sidebar__banner {
-    height: 140px;
+    height: 90px;
     background-color: $banner;
     display: flex;
     align-items: center;
+    flex-shrink: 0;
 
     i {
         background-color: #fff;

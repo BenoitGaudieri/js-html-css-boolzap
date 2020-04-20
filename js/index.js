@@ -163,7 +163,15 @@ $(document).ready(function () {
 
             for (let i = 0; i < userList.length; i++) {
                 if (userList[i].includes(searchInput)) {
-                    sidebar.children().eq(i).show();
+                    // nth-child solution
+                    let selectedUser = $(
+                        ".js-sidebar__content--user-div:nth-child(" +
+                            (i + 1) +
+                            ")"
+                    );
+                    // eq solution
+                    // sidebar.children().eq(i).show();
+                    selectedUser.show();
                 }
             }
         } else {
