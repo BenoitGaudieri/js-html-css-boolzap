@@ -43,7 +43,10 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 65px;
+  -ms-flex-preferred-size: 70px;
+      flex-basis: 70px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 
 .user-pic {
@@ -198,8 +201,17 @@ i:last-child {
   cursor: pointer;
 }
 
-.active {
+.sidebar__content--user-div:last-child {
+  border-bottom: 0;
+}
+
+.sidebar__content--user-div:hover {
+  background: #f5f5f5;
+}
+
+.sidebar__content--user-div.active {
   background-color: #eaebeb;
+  border-bottom: transparent;
 }
 
 /* 
@@ -235,12 +247,20 @@ i:last-child {
 }
 
 /* Content messages */
-.js-content__messages--margin {
+.content__messages--margin {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
   background-image: url("../../img/mine.jpg");
   overflow-y: auto;
+}
+
+.js-conversation {
+  display: none;
+}
+
+.js-conversation.active {
+  display: block;
 }
 
 .js-content__messages {
@@ -256,12 +276,15 @@ i:last-child {
 /* Message style */
 .message {
   background-color: #fff;
-  width: 250px;
-  margin: 0 0 50px;
-  padding: 20px;
+  min-width: 20%;
+  max-width: 60%;
+  margin: 5px 0;
+  padding: 15px 15px 25px 15px;
   border-radius: 10px;
   overflow-wrap: break-word;
   position: relative;
+  float: left;
+  clear: both;
 }
 
 .message .message--timestamp {
@@ -275,7 +298,6 @@ i:last-child {
 .message.my-message {
   float: right;
   background-color: #d5faba;
-  clear: both;
 }
 
 /* Content input bar */
@@ -291,18 +313,18 @@ i:last-child {
 }
 
 .content__input-bar i {
-  margin-right: 0;
+  text-align: center;
 }
 
 .content__input-bar--emoji {
   width: 50px;
+  margin: 0 20px;
 }
 
 .content__input-bar--input {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  margin: 10px;
   height: 65%;
 }
 
@@ -322,7 +344,11 @@ i:last-child {
 
 .content__input-bar--button {
   width: 50px;
-  margin: 0 15px 0 0;
+  margin: 0 30px;
+}
+
+.content__input-bar--button .js-send {
+  margin-right: 0;
 }
 
 .js-template {

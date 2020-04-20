@@ -60,7 +60,7 @@
             <div class="sidebar__content">
 
                 <!-- User div -->
-                <div class="sidebar__content--user-div active">
+                <div class="sidebar__content--user-div active" data-conversation="0">
 
                     <!-- Left side -->
                     <div class="sidebar__content--left">
@@ -225,8 +225,13 @@
             </div>
 
             <!-- Content messages -->
-            <div class="js-content__messages--margin">
-                <div class="js-content__messages clearfix"></div>
+            <div class="content__messages--margin">
+                <div class="js-conversation active" data-conversation="0">
+                    <div class="js-content__messages clearfix"></div>
+                </div>
+                <div class="js-conversation" data-conversation="1">
+                    <div class="js-content__messages clearfix"></div>
+                </div>
             </div>
 
             <!-- Content input bar -->
@@ -242,8 +247,6 @@
 
                 <!-- Record/Send button -->
                 <div class="content__input-bar--button">
-                    <!-- <i class="fas fa-microphone active"></i>
-                    <i class="fas fa-paper-plane"></i> -->
                     <i class="fas fa-microphone active js-send"></i>
                 </div>
             </div>

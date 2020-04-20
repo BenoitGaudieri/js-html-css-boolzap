@@ -34,7 +34,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 65px;
+    flex-basis: 70px;
+    flex-shrink: 0;
 }
 
 // User style

@@ -89,8 +89,17 @@
     align-items: center;
     border-bottom: 1px solid $sidebar-user;
     cursor: pointer;
-}
 
-.active {
-    background-color: $sidebar-user;
+    &:last-child {
+        border-bottom: 0;
+    }
+
+    &:hover {
+        background: #f5f5f5;
+    }
+
+    &.active {
+        background-color: $sidebar-user;
+        border-bottom: transparent;
+    }
 }

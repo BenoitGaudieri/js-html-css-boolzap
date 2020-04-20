@@ -22,12 +22,20 @@
 }
 
 /* Content messages */
-.js-content__messages--margin {
+.content__messages--margin {
     flex-grow: 1;
     background-image: url("../../img/mine.jpg");
     overflow-y: auto;
     // display: flex;
     // align-items: flex-end;
+}
+
+.js-conversation {
+    display: none;
+
+    &.active {
+        display: block;
+    }
 }
 
 .js-content__messages {
@@ -46,12 +54,18 @@
 /* Message style */
 .message {
     background-color: #fff;
-    width: 250px;
-    margin: 0 0 50px;
-    padding: 20px;
+    min-width: 20%;
+    max-width: 60%;
+    // width: 250px;
+    margin: 5px 0;
+    // margin: 0 0 50px;
+    padding: 15px 15px 25px 15px;
     border-radius: 10px;
     overflow-wrap: break-word;
     position: relative;
+    float: left;
+    clear: both;
+
     .message--timestamp {
         position: absolute;
         bottom: 5px;
@@ -59,13 +73,12 @@
         font-size: 14px;
         color: $info;
     }
-}
 
-.message.my-message {
-    float: right;
-    background-color: $my-message-bg;
-    clear: both;
-    // align-self: flex-end;
+    &.my-message {
+        float: right;
+        background-color: $my-message-bg;
+        // align-self: flex-end;
+    }
 }
 
 /* Content input bar */
@@ -76,17 +89,19 @@
     text-align: center;
 
     i {
-        margin-right: 0;
+        // margin-right: 0;
+        text-align: center;
     }
 }
 
 .content__input-bar--emoji {
     width: 50px;
+    margin: 0 20px;
 }
 
 .content__input-bar--input {
     flex-grow: 1;
-    margin: 10px;
+    // margin: 10px;
     height: 65%;
 }
 
@@ -105,15 +120,11 @@
 
 .content__input-bar--button {
     width: 50px;
-    margin: 0 15px 0 0;
+    margin: 0 30px;
 
-    // .fas {
-    //     display: none;
-    // }
-
-    // .active {
-    //     display: block;
-    // }
+    .js-send {
+        margin-right: 0;
+    }
 }
 
 .js-template {
