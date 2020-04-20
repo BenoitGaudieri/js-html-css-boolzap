@@ -51,6 +51,14 @@
     padding: 20px;
     border-radius: 10px;
     overflow-wrap: break-word;
+    position: relative;
+    .message--timestamp {
+        position: absolute;
+        bottom: 5px;
+        right: 10px;
+        font-size: 14px;
+        color: $info;
+    }
 }
 
 .message.my-message {

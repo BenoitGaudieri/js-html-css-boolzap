@@ -3,13 +3,19 @@ $(document).ready(function () {
     let messageDisplay = $(".js-content__messages");
     let newMessage = $(".js-chat--input");
     let text = newMessage.val();
+    var date = new Date();
+    var timestamp = date.getHours() + ":" + date.getMinutes();
+    console.log(timestamp);
 
     // Populating messageDisplay with array of old messages
     for (let i = 0; i < messageArr.length; i++) {
         let oldMessage = $(".js-template .message").clone();
+        var oldTimestamp = $(".js-template .message--timestamp").clone();
 
         // Prepend to mantain timestamp
         oldMessage.prepend(messageArr[i]);
+        oldTimestamp.prepend(timestamp);
+        oldMessage.append(oldTimestamp);
 
         // Display message
         messageDisplay.append(oldMessage);
@@ -26,7 +32,6 @@ $(document).ready(function () {
     });
 
     // Send message
-
     $(".js-send").click(function () {
         sendMessage();
         toggleIcon();
@@ -51,7 +56,10 @@ $(document).ready(function () {
         // if not empty append
         if (text !== "") {
             var elementNew = $(".js-template .message").clone();
+            var timestampNew = $(".js-template .message--timestamp").clone();
             elementNew.prepend(text);
+            timestampNew.prepend(timestamp);
+            elementNew.append(timestampNew);
             elementNew.addClass("my-message");
             messageDisplay.append(elementNew);
         }
