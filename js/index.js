@@ -7,16 +7,18 @@ $(document).ready(function () {
 
     // Populating messageDisplay with array of old messages
     for (let i = 0; i < messageArr.length; i++) {
-        let oldMessage = $(".js-template .message").clone();
-        var oldTimestamp = $(".js-template .message--timestamp").clone();
-
+        // Previously:
+        // let oldMessage = $(".js-template .message").clone();
+        // var oldTimestamp = $(".js-template .message--timestamp").clone();
         // Prepend to mantain timestamp
-        oldMessage.prepend(messageArr[i]);
-        oldTimestamp.prepend(timestampCalc());
-        oldMessage.append(oldTimestamp);
+        // oldMessage.prepend(messageArr[i]);
+        // oldTimestamp.prepend(timestampCalc());
+        // oldMessage.append(oldTimestamp);
+        // // Display message
+        // messageDiv.append(oldMessage);
 
-        // Display message
-        messageDiv.append(oldMessage);
+        // Refactored:
+        msgDisplay(messageArr[i]);
     }
 
     // Toggle send icon
@@ -46,8 +48,10 @@ $(document).ready(function () {
     // TODO: select only active conv
     function sendMessage() {
         text = newMessage.val().trim();
-        msgDisplay(text);
+        // Refactored:
+        msgDisplay(text, true);
 
+        // Previously:
         // // if not empty append
         // if (text !== "") {
         //     var elementNew = $(".js-template .message").clone();
@@ -63,27 +67,35 @@ $(document).ready(function () {
         newMessage.val("");
     }
 
-    // TODO: refactoring
-    function msgDisplay(text = false) {
+    /**
+     * Display message.
+     * If text = false it's an automated reply sent by the function itself
+     * If sent = false it's a message passed by an array.
+     * @param {bool} text
+     * @param {bool} sent
+     */
+    function msgDisplay(text = false, sent = false) {
         var elementNew = $(".js-template .message").clone();
-        var timestampNew = $(".js-template .message--timestamp").clone();
+
         if (text) {
             if (text !== "") {
-                elementNew.prepend(text);
-                timestampNew.prepend(timestampCalc());
-                elementNew.append(timestampNew);
-                elementNew.addClass("my-message");
-                messageDiv.append(elementNew);
+                elementNew.children(".message--text").text(text);
+                elementNew
+                    .children(".message--timestamp")
+                    .text(timestampCalc());
 
-                setTimeout(msgDisplay, 3000);
+                if (sent) {
+                    elementNew.addClass("my-message");
+                    setTimeout(msgDisplay, 1000);
+                }
+                messageDiv.append(elementNew);
             }
 
             // empty input val
             newMessage.val("");
         } else {
-            elementNew.prepend(answer);
-            timestampNew.prepend(timestampCalc());
-            elementNew.append(timestampNew);
+            elementNew.children(".message--text").text(answer);
+            elementNew.children(".message--timestamp").text(timestampCalc());
             messageDiv.append(elementNew);
         }
     }
