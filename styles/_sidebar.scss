@@ -67,6 +67,7 @@
     border: 1px solid $sidebar-user;
     // margin: 10px;
     height: 100%;
+    padding: 5px;
 }
 
 /* Sidebar content */
@@ -84,7 +85,7 @@
     }
 }
 
-.js-sidebar__content--user-div {
+.js-user--div {
     height: 90px;
     display: flex;
     justify-content: space-between;

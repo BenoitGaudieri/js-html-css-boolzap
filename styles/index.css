@@ -165,6 +165,7 @@ i:last-child {
           align-items: center;
   border: 1px solid #eaebeb;
   height: 100%;
+  padding: 5px;
 }
 
 /* Sidebar content */
@@ -188,7 +189,7 @@ i:last-child {
   margin: 20px;
 }
 
-.js-sidebar__content--user-div {
+.js-user--div {
   height: 90px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -203,15 +204,15 @@ i:last-child {
   cursor: pointer;
 }
 
-.js-sidebar__content--user-div:last-child {
+.js-user--div:last-child {
   border-bottom: 0;
 }
 
-.js-sidebar__content--user-div:hover {
+.js-user--div:hover {
   background: #f5f5f5;
 }
 
-.js-sidebar__content--user-div.active {
+.js-user--div.active {
   background-color: #eaebeb;
   border-bottom: transparent;
 }
@@ -293,7 +294,7 @@ i:last-child {
   clear: both;
 }
 
-.message .message--timestamp {
+.message--timestamp {
   position: absolute;
   bottom: 5px;
   right: 10px;
@@ -334,7 +335,7 @@ i:last-child {
   height: 65%;
 }
 
-.content__input-bar--input .input:focus-within {
+.input:focus-within {
   outline: solid 4px #8edafd;
 }
 
