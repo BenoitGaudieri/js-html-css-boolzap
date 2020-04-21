@@ -105,56 +105,41 @@ $(document).ready(function () {
      */
 
     /**
-     * cloning the js-template html to display the message
+     * invoke msgDisplay passing the message
      */
     // TODO: select only active conv
     function sendMessage() {
-        text = newMessage.val().trim();
+        text = newMessage.val();
         if (text) {
             // Refactored:
-            msgDisplay(text, true, true);
+            msgDisplay(text, true);
         }
-
-        // Previously:
-        // // if not empty append
-        // if (text !== "") {
-        //     var elementNew = $(".js-template .message").clone();
-        //     var timestampNew = $(".js-template .message--timestamp").clone();
-        //     elementNew.prepend(text);
-        //     timestampNew.prepend(timestampCalc());
-        //     elementNew.append(timestampNew);
-        //     elementNew.addClass("my-message");
-        //     messageDisplay.append(elementNew);
-        // }
-
-        // empty input val
-        newMessage.val("");
     }
 
     /**
      * Display message
-     * If text = false it's an automated reply sent by the function itself
-     * If sent = false it's a message passed by an array.
-     * If reply = false it doesn't trigger the reply function with false text
-     * @param {bool} text
-     * @param {bool} sent
-     * @param {bool} reply
+     * @text {bool} If false it's an automated reply sent by the function itself
+     * @sent {bool} If false it's not my-message
      */
-    function msgDisplay(text = false, sent = false, reply = false) {
-        var elementNew = $(".js-template .message").clone();
 
+    //  TODO: add active = false - if active then append to messageDivActive
+    function msgDisplay(text = false, sent = false) {
+        var elementNew = $(".js-template .message").clone();
+        console.table(elementNew);
+
+        // There is a message input
         if (text) {
+            // Double check if text exist
             if (text !== "") {
                 elementNew.children(".message--text").text(text);
                 elementNew
                     .children(".message--timestamp")
                     .text(timestampCalc());
 
+                // User message class
                 if (sent) {
                     elementNew.addClass("my-message");
-                }
-
-                if (reply) {
+                    // Bot reply
                     setTimeout(msgDisplay, 1000);
                 }
                 messageDivActive.append(elementNew);
@@ -170,13 +155,14 @@ $(document).ready(function () {
         scrollDown();
     }
 
-    //TODO: NOT WORKING
+    /**
+     * Scrolldown function
+     */
     function scrollDown() {
-        let pixelScroll = $(
-            ".js-content__messages .message:last-child"
-        ).height();
+        let pixelScroll = $(".content__messages--margin").height();
 
-        messageDivActive.scrollTop(pixelScroll);
+        $(".content__messages--margin").scrollTop(pixelScroll);
+
         // $(".content__messages--margin").animate(
         //     {
         //         scrollTop: pixelScroll,
@@ -216,13 +202,7 @@ $(document).ready(function () {
     }
 
     /**
-     *   
-  ____ ___ ____  _____ ____    _    ____  
- / ___|_ _|  _ \| ____| __ )  / \  |  _ \ 
- \___ \| || | | |  _| |  _ \ / _ \ | |_) |
-  ___) | || |_| | |___| |_) / ___ \|  _ < 
- |____/___|____/|_____|____/_/   \_\_| \_\
-                                          
+     * Searchbar
      */
 
     //  Searchbar logic
