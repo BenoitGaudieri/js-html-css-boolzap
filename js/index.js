@@ -95,6 +95,11 @@ $(document).ready(function () {
         messageDivActive = $(".js-conversation.active .js-content__messages");
     });
 
+    // Remove message
+    $("body").on("click", ".fa-trash-alt", function () {
+        $(this).parent().remove();
+    });
+
     /**
      * FUNCTIONS
      */
