@@ -1,6 +1,6 @@
 $(document).ready(function () {
     // Message references
-    let convStart = ["Hello!", "Please ask me anything."];
+    let convStart = ["Hello!", "Please ask me anything"];
     let newMessage = $(".js-chat--input");
     let text = newMessage.val();
 
@@ -26,7 +26,7 @@ $(document).ready(function () {
         //Username
         newUser.find(".user--username").text(userList[s]);
         // Message
-        newUser.find(".user--last-message").text("Che fame");
+        newUser.find(".user--last-message").text("Let's talk!");
         //Pic
         newUser.find(".user-pic").attr("src", "img/avatar_" + (s + 1) + ".jpg");
         //Data attr
