@@ -110,13 +110,13 @@ $(document).ready(function () {
 
     // Remove message
     $("body").on("click", ".fa-trash-alt", function () {
-        $(this).parent().remove();
+        // $(this).parent().remove();
+        $(this).parentsUntil(".js-content__messages").remove();
     });
 
     /**
      * Searchbar
      */
-
     //  Searchbar logic
     searchBar.keyup(function () {
         let searchInput = $(this).val().toLowerCase().trim();

@@ -286,7 +286,7 @@ i:last-child {
   min-width: 20%;
   max-width: 60%;
   margin: 5px 0;
-  padding: 15px 15px 25px 15px;
+  padding: 15px 25px 30px 15px;
   border-radius: 10px;
   overflow-wrap: break-word;
   position: relative;
@@ -356,6 +356,31 @@ i:last-child {
 
 .content__input-bar--button .js-send {
   margin-right: 0;
+}
+
+.dropdown {
+  position: absolute;
+  right: -20px;
+  top: 0;
+}
+
+.dropdown a {
+  text-decoration: none;
+}
+
+.dropdown .dropdown-menu {
+  opacity: 0;
+  height: 45px;
+  width: 40px;
+  background: #fafafa;
+}
+
+.dropdown .dropdown-menu i {
+  margin-right: 0;
+}
+
+.dropdown:focus-within .dropdown-menu {
+  opacity: 1;
 }
 
 .js-template {

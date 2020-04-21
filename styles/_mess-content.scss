@@ -59,7 +59,7 @@
     // width: 250px;
     margin: 5px 0;
     // margin: 0 0 50px;
-    padding: 15px 15px 25px 15px;
+    padding: 15px 25px 30px 15px;
     border-radius: 10px;
     overflow-wrap: break-word;
     position: relative;
@@ -123,6 +123,31 @@
 
     .js-send {
         margin-right: 0;
+    }
+}
+
+.dropdown {
+    position: absolute;
+    right: -20px;
+    top: 0;
+
+    a {
+        text-decoration: none;
+    }
+
+    .dropdown-menu {
+        opacity: 0;
+        height: 45px;
+        width: 40px;
+        background: $cream;
+
+        i {
+            margin-right: 0;
+        }
+    }
+
+    &:focus-within .dropdown-menu {
+        opacity: 1;
     }
 }
 
