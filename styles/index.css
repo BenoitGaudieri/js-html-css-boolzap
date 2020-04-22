@@ -362,6 +362,7 @@ i:last-child {
   position: absolute;
   right: -20px;
   top: 0;
+  opacity: 0;
 }
 
 .dropdown a {
@@ -380,6 +381,10 @@ i:last-child {
 }
 
 .dropdown:focus-within .dropdown-menu {
+  opacity: 1;
+}
+
+.message:hover .dropdown {
   opacity: 1;
 }
 

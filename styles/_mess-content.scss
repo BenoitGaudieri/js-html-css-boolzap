@@ -130,6 +130,7 @@
     position: absolute;
     right: -20px;
     top: 0;
+    opacity: 0;
 
     a {
         text-decoration: none;
@@ -151,6 +152,9 @@
     }
 }
 
+.message:hover .dropdown {
+    opacity: 1;
+}
 .js-template {
     display: none;
 }
